@@ -25,6 +25,7 @@ for i, t in enumerate(T):
 page = open("page.tpl.html", encoding="utf-8").read()
 page = (page.replace("{{ROWS}}", "\n".join(rows))
             .replace("{{TRACKS}}", json.dumps([{"t": t["title"], "s": t["sub"], "f": t["f"], "d": t["d"]} for t in T], ensure_ascii=False))
+            .replace("{{MANN}}", open("img/mann.svg.html", encoding="utf-8").read())
             .replace("{{TOTAL}}", f"{h} Stunden {m} Minuten"))
 open("index.html", "w", encoding="utf-8").write(page)
 print("index.html geschrieben,", len(T), "Teile,", f"{h} h {m} min")

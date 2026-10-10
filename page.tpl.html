@@ -15,8 +15,12 @@
 @font-face { font-family: "Garamond Deich"; src: url("fonts/EBGaramond-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 
 :root {
-  --night: #1B1F2A;   /* Himmel über dem Deich, wie auf dem Cover */
-  --slate: #2A323E;   /* das Land hinter dem Deich */
+  --night: #1B1F2A;   /* Himmel über dem Deich, wie auf dem Buchumschlag */
+  --horizon: #343D4C; /* Himmel am Horizont, heller */
+  --land:  #12161D;   /* Deich und Land als Silhouette */
+  --sky-head: #2E3644;/* Himmel in Kopfhöhe des Mannes (Brillenbügel) */
+  --smoke: rgba(241, 234, 219, .45);
+  --slate: #12161D;
   --bar:   #222834;
   --brass: #C2A574;   /* die Deichlinie */
   --ivory: #F1EADB;
@@ -35,7 +39,8 @@ button, a { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
 
 /* ---------- Kopf: das Cover als Seite ---------- */
-.sky { background: var(--night); padding: max(16vh, 88px) 20px 0; text-align: center; }
+.sky { background: linear-gradient(to bottom, var(--night) 0%, var(--night) 38%, var(--horizon) 100%); padding: max(13vh, 72px) 20px 0; text-align: center; }
+.kicker { margin: 0 0 18px; color: var(--brass); font-size: 20px; font-variant: small-caps; letter-spacing: .12em; }
 h1 {
   margin: 0; font-weight: 400; font-size: clamp(52px, 13vw, 104px); line-height: 1;
   letter-spacing: -.01em; font-variant-numeric: normal;
@@ -53,7 +58,12 @@ h1 {
 .start .resume { display: block; font-size: 17px; color: var(--mist); font-style: italic; line-height: 1.3; text-align: left; }
 .start .lbl { text-align: left; line-height: 1.25; }
 .meta { margin: 22px 0 0; color: var(--mist); font-size: 18px; }
-.dike { display: block; width: calc(100% + 40px); height: clamp(70px, 14vw, 150px); margin: 48px -20px 0; background: var(--night); }
+.scene { position: relative; height: clamp(190px, 34vw, 280px); margin: 24px -20px 0; }
+.dike { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; display: block; }
+.scene { overflow: hidden; }
+@media (max-width: 700px) { .scene { height: 170px; } }  /* schmal: nur die lange Krone, Böschungen außerhalb */
+/* Kammlinie liegt bei 62 % der Szenenhöhe; der Mann steht darauf */
+.man { position: absolute; bottom: 38%; left: calc(50% + min(16vw, 200px)); height: clamp(96px, 17vw, 150px); width: auto; overflow: visible; }
 
 /* ---------- Kapitel ---------- */
 main { max-width: 680px; margin: 0 auto; padding: 8px 16px 40px; }
@@ -115,6 +125,7 @@ input[type=range] { width: 100%; margin: 8px 0 4px; accent-color: var(--brass); 
 <body>
 
 <header class="sky">
+  <p class="kicker">Roman</p>
   <h1>Der alte Deich</h1>
   <div class="rule"></div>
   <p class="reader">gelesen von Matthias</p>
@@ -123,10 +134,13 @@ input[type=range] { width: 100%; margin: 8px 0 4px; accent-color: var(--brass); 
     <span class="lbl"><span id="startLabel">Von Anfang an hören</span><span class="resume" id="resume" hidden></span></span>
   </button>
   <p class="meta">20 Teile, zusammen etwa {{TOTAL}}</p>
-  <svg class="dike" viewBox="0 0 1400 150" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 132 C 260 120, 470 22, 700 20 S 1140 120, 1400 132 V150 H0 Z" fill="#2A323E"/>
-    <path d="M0 132 C 260 120, 470 22, 700 20 S 1140 120, 1400 132" fill="none" stroke="#C2A574" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
-  </svg>
+  <div class="scene">
+    <svg class="dike" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 91 C 60 90.5, 120 86, 200 76 S 320 62.8, 400 62.4 L 860 62 C 885 62, 895 64, 915 73 S 970 89, 1000 90 V100 H0 Z" style="fill:var(--land)"/>
+      <path d="M0 91 C 60 90.5, 120 86, 200 76 S 320 62.8, 400 62.4 L 860 62 C 885 62, 895 64, 915 73 S 970 89, 1000 90" fill="none" stroke="#C2A574" stroke-opacity=".75" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+    </svg>
+    {{MANN}}
+  </div>
 </header>
 
 <main>
