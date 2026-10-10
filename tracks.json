@@ -1,0 +1,142 @@
+[
+ {
+  "n": 1,
+  "title": "Titel und Widmung",
+  "sub": "",
+  "d": 32.0,
+  "f": "audio/01.mp3"
+ },
+ {
+  "n": 2,
+  "title": "Prolog",
+  "sub": "",
+  "d": 277.2,
+  "f": "audio/02.mp3"
+ },
+ {
+  "n": 3,
+  "title": "Das Schulhaus",
+  "sub": "Erstes Kapitel",
+  "d": 669.8,
+  "f": "audio/03.mp3"
+ },
+ {
+  "n": 4,
+  "title": "Ziegelrot",
+  "sub": "Zweites Kapitel",
+  "d": 645.9,
+  "f": "audio/04.mp3"
+ },
+ {
+  "n": 5,
+  "title": "Der Flieger",
+  "sub": "Drittes Kapitel",
+  "d": 629.9,
+  "f": "audio/05.mp3"
+ },
+ {
+  "n": 6,
+  "title": "Rauch über Neuengamme",
+  "sub": "Viertes Kapitel",
+  "d": 601.2,
+  "f": "audio/06.mp3"
+ },
+ {
+  "n": 7,
+  "title": "Lager Nr. 6",
+  "sub": "Fünftes Kapitel",
+  "d": 645.2,
+  "f": "audio/07.mp3"
+ },
+ {
+  "n": 8,
+  "title": "Hungerwinter und Platt",
+  "sub": "Sechstes Kapitel",
+  "d": 696.9,
+  "f": "audio/08.mp3"
+ },
+ {
+  "n": 9,
+  "title": "Curiohaus",
+  "sub": "Siebtes Kapitel",
+  "d": 662.5,
+  "f": "audio/09.mp3"
+ },
+ {
+  "n": 10,
+  "title": "Ubi bene",
+  "sub": "Achtes Kapitel",
+  "d": 520.4,
+  "f": "audio/10.mp3"
+ },
+ {
+  "n": 11,
+  "title": "Lausanne",
+  "sub": "Neuntes Kapitel",
+  "d": 527.2,
+  "f": "audio/11.mp3"
+ },
+ {
+  "n": 12,
+  "title": "Wasser",
+  "sub": "Zehntes Kapitel",
+  "d": 624.6,
+  "f": "audio/12.mp3"
+ },
+ {
+  "n": 13,
+  "title": "Der Maler an der Wand",
+  "sub": "Elftes Kapitel",
+  "d": 681.6,
+  "f": "audio/13.mp3"
+ },
+ {
+  "n": 14,
+  "title": "Holstenwall",
+  "sub": "Zwölftes Kapitel",
+  "d": 695.8,
+  "f": "audio/14.mp3"
+ },
+ {
+  "n": 15,
+  "title": "Zeugen",
+  "sub": "Dreizehntes Kapitel",
+  "d": 717.1,
+  "f": "audio/15.mp3"
+ },
+ {
+  "n": 16,
+  "title": "Elf Tage im September",
+  "sub": "Vierzehntes Kapitel",
+  "d": 688.6,
+  "f": "audio/16.mp3"
+ },
+ {
+  "n": 17,
+  "title": "Auf der anderen Seite des Zauns",
+  "sub": "Fünfzehntes Kapitel",
+  "d": 740.5,
+  "f": "audio/17.mp3"
+ },
+ {
+  "n": 18,
+  "title": "Mit Argumenten",
+  "sub": "Sechzehntes Kapitel",
+  "d": 760.2,
+  "f": "audio/18.mp3"
+ },
+ {
+  "n": 19,
+  "title": "Lübecker Bucht",
+  "sub": "Epilog",
+  "d": 425.2,
+  "f": "audio/19.mp3"
+ },
+ {
+  "n": 20,
+  "title": "Nachbemerkung",
+  "sub": "",
+  "d": 118.0,
+  "f": "audio/20.mp3"
+ }
+]
